@@ -3,30 +3,34 @@ import Utils.BrowserUtils;
 import Utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 public class LoginPage {
 
     public LoginPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
 
     }
+
     @FindBy(xpath = "//input[@id='inputEmail']")
-    WebElement Name;
+    WebElement username;
 
     @FindBy(xpath = "//input[@id='inputPassword']")
-    WebElement pass;
+    WebElement password;
 
-    @FindBy(xpath ="//button[@type='submit']")
+    @FindBy(xpath = "//button[@type='submit']")
     WebElement SignIn;
 
-    public void login(){
-      Name.sendKeys(ConfigReader.readProperty("username"));
-      pass.sendKeys(ConfigReader.readProperty("password"));
-        SignIn.click();
+
+        public void enterUsernamePassword(String username, String passWord) throws InterruptedException {
+        this.username.sendKeys(username);
+         this.password. sendKeys(passWord);
+
     }
 
-
+    public void successSignIn() {
+        SignIn.click();
+    }
 }
