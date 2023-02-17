@@ -4,16 +4,12 @@ import Utils.BrowserUtils;
 import Utils.ConfigReader;
 import Utils.DriverHelper;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 public class TestBase {
     public WebDriver driver;
-    @BeforeMethod
+
     public void setUp() {
 
         driver = DriverHelper.getDriver();
@@ -22,7 +18,7 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
     }
-    @AfterMethod
+
     public void tearDown(){
         BrowserUtils.getScreenShot(driver,"Hospital_room");
         driver.quit();
