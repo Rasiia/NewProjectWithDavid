@@ -9,7 +9,8 @@ public class DashboardPage {
     public DashboardPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-
+    @FindBy(xpath = "//button[@type='submit']")
+    WebElement SignIn;
     @FindBy(xpath = "//div[@id='patients-with-rooms-live']")
     WebElement patientsWithRooms;
     @FindBy(xpath = "//div[@id='patients-waiting-live']")
@@ -17,11 +18,13 @@ public class DashboardPage {
     @FindBy(xpath = "//div[@id='free-rooms-live']")
     WebElement freeRooms;
 
+
+
+
     public void verifyText(String patientWithRoom, String waitingPatients, String freeRoom) {
         Assert.assertEquals(patientsWithRooms.getText(), patientWithRoom);
         Assert.assertEquals(patientsWaiting.getText(), waitingPatients);
         Assert.assertEquals(freeRooms.getText(), freeRoom);
-
 
 
     }
