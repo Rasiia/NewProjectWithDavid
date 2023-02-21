@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-        features ="src/main/resources/LoginPage.feature",               // resourse content root
-          glue ="Hospital_room/stepdefinitions/LoginStepDef.java",        //stepdif  sourse
+       features ="",               // resourse content root
+          glue ="",        //stepdif  sourse
           dryRun = false,
          tags = "@smoke",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt"}

@@ -1,6 +1,6 @@
 Feature: Testing the Login functionality
 
-  Scenario: Happy Path login to the website
+  Scenario:
     Given User navigates to the NHS website
     When User enters username and password
     Then User click Sign in button
@@ -24,6 +24,10 @@ Feature: Testing the Login functionality
 
   Scenario:
     Given User navigates to the NHS website
-    And user is successfully logged in
+    Given user enters correct credentials
+     When user is successfully logged in
     When user should be able to see 3 cards with numbers the information of Patients with rooms
-    Then user able to see the headers with Information no, Patients with rooms,Room,Score
+    And user able to see the headers with Information no, Patients with rooms,Room,Score
+
+
+

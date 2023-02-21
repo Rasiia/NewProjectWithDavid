@@ -5,11 +5,11 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 
-    @RunWith(Cucumber.class)
+   @RunWith(Cucumber.class)
 
     @CucumberOptions(
-            features ="src/main/resources",               // resourse content root
-            glue ="Hospital_room/stepdefinitions",        //stepdif  sourse
+            features ="",               // resourse content root
+            glue ="",        //stepdif  sourse
             dryRun = false,
             tags = "@smoke",
             plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt"}

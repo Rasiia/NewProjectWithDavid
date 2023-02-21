@@ -18,6 +18,7 @@ public class DashboardStepDef {
     @When("User is successfully logged in")
     public void user_is_successfully_logged_in() {
 
+
     }
 
     @Then("User should be able to see {int} cards with numbers the information of Patients with rooms")
