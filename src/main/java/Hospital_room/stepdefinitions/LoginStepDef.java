@@ -33,6 +33,10 @@ public class LoginStepDef {
         mainPage.verifyTitleOfThePage(driver, "NHS  patients");
     }
 
+@Given("user enters correct credentials")
+public void user_enters_correct_credentials() {
+    }
+
 }
 
 
