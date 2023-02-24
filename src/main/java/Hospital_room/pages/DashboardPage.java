@@ -18,9 +18,6 @@ public class DashboardPage {
     @FindBy(xpath = "//div[@id='free-rooms-live']")
     WebElement freeRooms;
 
-
-
-
     public void verifyText(String patientWithRoom, String waitingPatients, String freeRoom) {
         Assert.assertEquals(patientsWithRooms.getText(), patientWithRoom);
         Assert.assertEquals(patientsWaiting.getText(), waitingPatients);

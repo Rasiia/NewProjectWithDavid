@@ -33,6 +33,33 @@ public class LoginStepDef {
         mainPage.verifyTitleOfThePage(driver, "NHS  patients");
     }
 
+    @Given("user enters correct credentials")
+    public void user_enters_correct_credentials() {
+        nhsMainPage.enterUsernamePassword(ConfigReader.readProperty("username"),
+                ConfigReader.readProperty("password"));
+    }
+
+    @When("User enters username and invalid password")
+    public void user_enters_username_and_invalid_password() {
+        nhsMainPage.enterUsernamePassword(ConfigReader.readProperty("user"),
+                ConfigReader.readProperty("pass"));
+    }
+
+    @Then("User cannot login")
+    public void user_cannot_login() {
+        nhsMainPage.successSignIn();
+    }
+
+    @When("User enters username and blank password")
+    public void user_enters_username_and_blank_password() {
+
+    }
+
+    @Then("User cannot login and receives error message")
+    public void user_cannot_login_and_receives_error_message() {
+
+    }
 }
+
 
 

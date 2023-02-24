@@ -8,22 +8,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 public class LoginPage {
-
     public LoginPage(WebDriver driver) {
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
+        PageFactory.initElements(driver,this);
     }
     @FindBy(xpath = "//input[@id='inputEmail']")
     WebElement username;
-
     @FindBy(xpath = "//input[@id='inputPassword']")
     WebElement password;
-
-    @FindBy(xpath = "//button[@type='submit']")
+    @FindBy(xpath = "//button[.='Sign in']")
     WebElement SignIn;
 
-
-
-    public void enterUsernamePassword(String username, String passWord) throws InterruptedException {
+    public void enterUsernamePassword(String username, String passWord) {
         this.username.sendKeys(username);
         this.password. sendKeys(passWord);
     }

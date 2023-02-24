@@ -12,11 +12,12 @@ public class DashboardStepDef {
 
     WebDriver driver = DriverHelper.getDriver();
     DashboardPage dashboardPage = new DashboardPage(driver);
-
+    LoginPage nhsMainPage = new LoginPage(driver);
 
 
     @When("User is successfully logged in")
     public void user_is_successfully_logged_in() {
+        nhsMainPage.successSignIn();
 
     }
 
