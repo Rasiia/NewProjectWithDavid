@@ -25,20 +25,29 @@ public class AddpatientPage {
     //input[@type='checkbox']
     @FindBy(xpath = "//input[@value='Add patient']")
     WebElement addpatientbutton;
-   public void AddButton(){
+
+    @FindBy(xpath = "//input[@value='Schizophrenia']")
+    WebElement checkboxskitsof;
+
+    public void skitso() throws InterruptedException {
+        Thread.sleep(2000);
+        checkboxskitsof.click();
+    }
+   public void AddButton() throws InterruptedException {
+       Thread.sleep(2000);
        Add.click();
    }
     public void provideInformation(String FirstName,String LastName,String Hospital,String Datebirth,String Sex) throws InterruptedException {
 
-        Thread.sleep(500);
+        Thread.sleep(1000);
         this.FirstName.sendKeys(FirstName);
-        Thread.sleep(500);
+        Thread.sleep(1000);
         this.LastName.sendKeys(LastName);
-        Thread.sleep(500);
+        Thread.sleep(1000);
         this.Hospital.sendKeys(Hospital);
-        Thread.sleep(500);
+        Thread.sleep(1000);
         this.Datebirth.sendKeys(Datebirth);
-        Thread.sleep(500);
+        Thread.sleep(1000);
         this.Sex.sendKeys(Sex);
 
 

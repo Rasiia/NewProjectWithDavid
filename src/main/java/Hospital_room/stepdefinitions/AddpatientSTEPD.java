@@ -34,9 +34,16 @@ public class AddpatientSTEPD {
 
     @When("user provides the information First Name,'Last Name,'Hospital no','Date of birth','Sex','Male' ,' Female'")
     public void user_provides_the_information_First_Name_Last_Name_Hospital_no_Date_of_birth_Sex_Male_Female() throws InterruptedException {
-        addpatientPage.provideInformation("Rasiia", "Daniiarova", "55", "23.02.2023", "Female");
+        addpatientPage.provideInformation("R", "Danii", "777", "25.02.2023", "Female");
     }
-    @When("user clicks the add patient button")
+
+
+         @When("user click disease checkbox")
+         public void user_click_disease_checkbox() throws InterruptedException {
+       addpatientPage.skitso();
+
+    }
+        @When("user clicks the add patient button")
     public void user_clicks_the_add_patient_button() throws InterruptedException {
         addpatientPage.AddButton();
         }

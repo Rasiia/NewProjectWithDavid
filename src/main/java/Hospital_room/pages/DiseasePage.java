@@ -11,16 +11,12 @@ public class DiseasePage {
 
     @FindBy(xpath = "//a[@href='/app/systemsettings']")
     WebElement systemSetting;
-
     @FindBy(xpath = "//input[@name='diseaseName']")
     WebElement DiseaseName;
-
     @FindBy(xpath = "//input[@name='diseaseScore']")
     WebElement DiseaseScore;
-
     @FindBy(xpath = "//input[@value='Add disease']")
     WebElement addDisease;
-
     @FindBy(xpath = "//input[@value='Delete rooms']")
     WebElement deleteDisease;
 
