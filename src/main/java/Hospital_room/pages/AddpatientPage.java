@@ -38,7 +38,7 @@ public class AddpatientPage {
         this.Hospital.sendKeys(Hospital);
         Thread.sleep(500);
         this.Datebirth.sendKeys(Datebirth);
-        Thread.sleep(500);
+
         this.Sex.sendKeys(Sex);
 
 

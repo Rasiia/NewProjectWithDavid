@@ -1,6 +1,5 @@
 Feature:
   Background:
-    Given user navigates to the "http://www.techtorialacademy.link/"
 
     Scenario:
       Given User navigates to the NHS website
