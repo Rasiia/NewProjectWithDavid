@@ -29,12 +29,12 @@ public class SystemSettingPage {
 
 
 
-    public void add() throws InterruptedException {
-        Thread.sleep(2000);
+    public void add()  {
+
     systemSetting.click();
     }
-    public void Name() throws InterruptedException {
-        Thread.sleep(1000);
+    public void Name()  {
+
         RoomName.sendKeys("Room 199");
 
     }
