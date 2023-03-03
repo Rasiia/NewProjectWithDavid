@@ -11,12 +11,12 @@ public class SystemSettingStepd {
        SystemSettingPage systemSettingPage= new SystemSettingPage(driver);
 
     @When("User clicks the system setting the user should be able to add the room with the room name")
-    public void user_clicks_the_system_setting_the_user_should_be_able_to_add_the_room_with_the_room_name() throws InterruptedException {
+    public void user_clicks_the_system_setting_the_user_should_be_able_to_add_the_room_with_the_room_name()  {
     systemSettingPage.add();
     }
 
     @When("all the diseases from the system will be displayed in a table by default order of room name")
-    public void all_the_diseases_from_the_system_will_be_displayed_in_a_table_by_default_order_of_room_name() throws InterruptedException {
+    public void all_the_diseases_from_the_system_will_be_displayed_in_a_table_by_default_order_of_room_name()  {
     systemSettingPage.Name();
     systemSettingPage.Room();
     }

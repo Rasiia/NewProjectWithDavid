@@ -1,7 +1,6 @@
 Feature:
   Background:
 
-
     Scenario:
       Given User navigates to the NHS website
       When User enters username and password
