@@ -5,10 +5,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-       features ="src/main/resources/AddPatients.feature",               // resourse content root
-          glue ="Hospital_room/stepdefinitions/AddpatientSTEPD.java",               //stepdif  sourse
+       features ="src/main/resources",                                       // resourse content root
+          glue ="Hospital_room.stepdefinitions",                              //stepdif  sourse
           dryRun = false,
-           tags = "@smoke",
         plugin = {"pretty","html:target/uiReport.html","rerun:target/uiFailedTests.txt"}
 )
 public class Runner {

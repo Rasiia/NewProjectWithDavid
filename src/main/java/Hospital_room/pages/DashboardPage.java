@@ -9,8 +9,7 @@ public class DashboardPage {
     public DashboardPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-    @FindBy(xpath = "//button[@type='submit']")
-    WebElement SignIn;
+
     @FindBy(xpath = "//div[@id='patients-with-rooms-live']")
     WebElement patientsWithRooms;
     @FindBy(xpath = "//div[@id='patients-waiting-live']")
