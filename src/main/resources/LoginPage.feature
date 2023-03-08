@@ -15,7 +15,6 @@ Feature: Testing the Login functionality
     Then User cannot login
 
 
-
   Scenario: Negative testing of login functionality by passing blank password
     Given User navigates to the NHS website
     When User enters username and blank password

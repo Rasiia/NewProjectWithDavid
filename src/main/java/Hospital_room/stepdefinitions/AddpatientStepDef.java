@@ -7,7 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-public class AddpatientSTEPD {
+public class AddpatientStepDef {
     WebDriver driver = DriverHelper.getDriver();
     AddpatientPage addpatientPage = new AddpatientPage(driver);
     LoginPage loginPage = new LoginPage(driver);

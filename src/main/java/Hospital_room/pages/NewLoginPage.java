@@ -22,9 +22,6 @@ public class NewLoginPage {
     @FindBy(xpath = "//button[. ='Add user']")
     WebElement addUser;
 
-
-
-
    public void systemset(){
        systemSetting.click();
    }
@@ -34,6 +31,7 @@ public class NewLoginPage {
     this.name.sendKeys("amina");
        Thread.sleep(2000);
     this. passport.sendKeys("amina");
+    this.addUser.click();
    }
 
    public void addUser() throws InterruptedException {

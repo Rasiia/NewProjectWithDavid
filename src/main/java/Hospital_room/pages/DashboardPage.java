@@ -1,4 +1,5 @@
 package Hospital_room.pages;
+import Utils.BrowserUtils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +18,14 @@ public class DashboardPage {
     @FindBy(xpath = "//div[@id='free-rooms-live']")
     WebElement freeRooms;
 
+
+    public void WithRoom() {
+     patientsWithRooms.isDisplayed();
+     patientsWaiting.isDisplayed();
+    }
+    public void freerooms(){
+       freeRooms.isDisplayed();
+    }
     public void verifyText(String patientWithRoom, String waitingPatients, String freeRoom) {
         Assert.assertEquals(patientsWithRooms.getText(), patientWithRoom);
         Assert.assertEquals(patientsWaiting.getText(), waitingPatients);

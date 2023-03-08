@@ -17,16 +17,20 @@ public class DashboardStepDef {
 
     @When("User is successfully logged in")
     public void user_is_successfully_logged_in() {
+        nhsMainPage.enterUsernamePassword(ConfigReader.readProperty("username"), ConfigReader.readProperty("password"));
         nhsMainPage.successSignIn();
-
     }
+
 
     @Then("User should be able to see {int} cards with numbers the information of Patients with rooms")
     public void user_should_be_able_to_see_cards_with_numbers_the_information_of_Patients_with_rooms(Integer int1) {
+    dashboardPage.WithRoom();
+    dashboardPage.WithRoom();
 
     }
     @Then("waiting Free rooms")
     public void waiting_Free_rooms() {
+     dashboardPage.freerooms();
     }
 
     @Then("User validates the Free rooms Patients with rooms waiting free rooms")

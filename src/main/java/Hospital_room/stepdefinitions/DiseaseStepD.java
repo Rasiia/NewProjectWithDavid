@@ -30,7 +30,7 @@ public class DiseaseStepD {
 
     @When("the user clicks the system setting the user should be able to add the disease with name adn score")
     public void the_user_clicks_the_system_setting_the_user_should_be_able_to_add_the_disease_with_name_adn_score() throws InterruptedException {
-     diseasePage.enter();
+     diseasePage.enter("pain");
     }
 
     @When("all the diseases the system will be displayed in a table by default order of disease name")

@@ -11,7 +11,7 @@ public class SystemSettingPage {
     }
 
     @FindBy(xpath = "//a[@href='/app/systemsettings']")
-    WebElement systemSetting;
+    WebElement SystemSetting;
 
     @FindBy(xpath = "//input[@name='roomName']")
     WebElement RoomName;
@@ -29,11 +29,12 @@ public class SystemSettingPage {
 
 
 
-    public void add()  {
-
-    systemSetting.click();
+    public void add() throws InterruptedException {
+Thread.sleep(2000);
+    SystemSetting.click();
     }
-    public void Name()  {
+    public void Name() throws InterruptedException {
+        Thread.sleep(2000);
         RoomName.sendKeys("Room 199");
 
     }
@@ -41,7 +42,8 @@ public class SystemSettingPage {
             AddRoom.click();
         }
 
-        public void sett()  {
+        public void sett() throws InterruptedException {
+            Thread.sleep(2000);
        click.click();
         }
 

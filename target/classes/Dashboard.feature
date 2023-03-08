@@ -1,5 +1,5 @@
 Feature: Testing the Login functionality
-Background: Navigation for the website
+Background:
   Scenario:
     Given User navigates to the NHS website
     When  User is successfully logged in

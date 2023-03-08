@@ -35,7 +35,7 @@ public class DiseasePage {
 
     public void enter() throws InterruptedException {
         Thread.sleep(1000);
-        addDisease.click();
+       addDisease.click();
     }
 
     public void name() throws InterruptedException {
