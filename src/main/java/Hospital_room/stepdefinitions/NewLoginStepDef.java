@@ -34,7 +34,7 @@ public class NewLoginStepDef {
 
     @Then("user can see all information displayed on the dashboard page should not change after loggig in with new user")
     public void user_can_see_all_information_displayed_on_the_dashboard_page_should_not_change_after_loggig_in_with_new_user() {
-    List<WebElement>allheaders= driver.findElements(By.tagName("h3"));
+    List<WebElement>allheaders= driver.findElements(By.tagName("//div"));
     for(WebElement header:allheaders){
         System.out.println(header.getText().trim());
         Assert.assertTrue(header.getText().trim().toLowerCase().contains("allheaders"));

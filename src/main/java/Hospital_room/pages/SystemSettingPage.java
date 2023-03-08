@@ -34,7 +34,6 @@ public class SystemSettingPage {
     systemSetting.click();
     }
     public void Name()  {
-
         RoomName.sendKeys("Room 199");
 
     }

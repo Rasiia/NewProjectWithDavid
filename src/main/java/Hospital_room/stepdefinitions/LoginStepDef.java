@@ -6,6 +6,7 @@ import Utils.DriverHelper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 public class LoginStepDef {
     WebDriver driver = DriverHelper.getDriver();
@@ -52,12 +53,13 @@ public class LoginStepDef {
 
     @When("User enters username and blank password")
     public void user_enters_username_and_blank_password() {
-
+        nhsMainPage.enterUsernamePassword(ConfigReader.readProperty(""),
+                ConfigReader.readProperty(""));
     }
 
     @Then("User cannot login and receives error message")
-    public void user_cannot_login_and_receives_error_message() {
-
+    public void user_cannot_login_and_receives_error_message(String getErrorMessage) {
+        Assert.assertTrue(nhsMainPage.getErrorMessage (getErrorMessage));
     }
 }
 

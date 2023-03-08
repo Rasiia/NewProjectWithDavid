@@ -1,4 +1,6 @@
 package Hospital_room.pages;
+import Utils.DriverHelper;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,32 +30,37 @@ public class AddpatientPage {
     WebElement addpatientbutton;
 
 
+    public void AddButton() throws InterruptedException {
+        Thread.sleep(2000);
+        Add.click();
+        Thread.sleep(2000);
+    }
 
-   public void AddButton(){
-       Add.click();
 
-   }
-    public void add(){
-       checkbox.click();
+    public void provideInformation(String FirstName, String LastName, String Hospital, String Datebirth, String Sex) throws InterruptedException {
+
+        Thread.sleep(2000);
+        this.FirstName.sendKeys(FirstName);
+        Thread.sleep(2000);
+        this.LastName.sendKeys(LastName);
+        Thread.sleep(2000);
+        this.Hospital.sendKeys(Hospital);
+        Thread.sleep(2000);
+        this.Datebirth.sendKeys(Datebirth);
+        Thread.sleep(2000);
+        this.Sex.sendKeys(Sex);
+    }
+
+    public void add() throws InterruptedException {
+
+        Thread.sleep(2000);
+        checkbox.click();
+        Thread.sleep(2000);
 
     }
-    public void provideInformation(String FirstName,String LastName,String Hospital,String Datebirth,String Sex) throws InterruptedException {
-
-        Thread.sleep(500);
-        this.FirstName.sendKeys(FirstName);
-        Thread.sleep(500);
-        this.LastName.sendKeys(LastName);
-        Thread.sleep(500);
-        this.Hospital.sendKeys(Hospital);
-        Thread.sleep(500);
-        this.Datebirth.sendKeys(Datebirth);
-        Thread.sleep(500);
-        this.Sex.sendKeys(Sex);
-
-
-
-
-
+    public void clik() throws InterruptedException {
+        Thread.sleep(2000);
+        addpatientbutton.click();
     }
     }
 
